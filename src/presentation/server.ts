@@ -26,7 +26,7 @@ export class Server {
         // Public Folder
         this.app.use(express.static(this.publicPath));
 
-        this.app.get(/.*/, (req, res) => { // Por alguna razon eso corresponde a "*" o "/*"
+        this.app.get('*', (req, res) => { // Por alguna razon eso corresponde a "*" o "/*"
             const indexPath = path.join(__dirname + `${this.publicPath}/index.html`);
             res.sendFile(indexPath);
         });
