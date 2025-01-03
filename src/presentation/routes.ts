@@ -9,8 +9,7 @@ export class AppRoutes {
 
         const router = Router();
 
-        router.use('/api/todos', TodoRoutes.routes);        
-        
+        router.use('/api/todos', TodoRoutes.routes);
         
         return router;
     }
